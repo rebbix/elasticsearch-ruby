@@ -167,7 +167,7 @@ module Elasticsearch
           :version,
           :batched_reduce_size ]
 
-        method = HTTP_GET
+        method = HTTP_POST
         path   = Utils.__pathify( Utils.__listify(arguments[:index]), Utils.__listify(arguments[:type]), UNDERSCORE_SEARCH )
 
         params = Utils.__validate_and_extract_params arguments, valid_params

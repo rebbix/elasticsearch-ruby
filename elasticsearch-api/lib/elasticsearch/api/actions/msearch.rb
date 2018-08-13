@@ -43,7 +43,7 @@ module Elasticsearch
           :max_concurrent_searches,
           :typed_keys ]
 
-        method = HTTP_GET
+        method = HTTP_POST
         path   = Utils.__pathify( Utils.__listify(arguments[:index]), Utils.__listify(arguments[:type]), '_msearch' )
 
         params = Utils.__validate_and_extract_params arguments, valid_params
